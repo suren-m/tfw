@@ -18,6 +18,8 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 * Clone this repo into your `clouddrive` folder in cloud shell.
 
     *   `clouddrive` folder is backed by fileshare in the storage account created for your cloud shell
+    
+    <br />
 
     ```bash
         # make sure you are in the clouddrive folder 
