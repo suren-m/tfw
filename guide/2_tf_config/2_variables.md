@@ -14,7 +14,7 @@ cd ~/clouddrive/tfw/contoso
 
 Introduce variables to `main.tf`, so it looks such as below.
 
-* Notice how each variable has a slightly different setup. We've done this, so we can try different approaches to passing in data.
+* Notice how each variable has a slightly different setup. We've done this, so we can try different approaches to pass in data.
 
 ```terraform
 variable prefix {}
@@ -195,7 +195,7 @@ terraform apply -auto-approve -var-file="contoso.europe.tfvars"
 
 ## 2.4 Recap
 
-Take a few minutes to understand the different sources of values that are used for our variables.
+Take a few minutes to observe and recap on different value sources that are used for our variables.
 
 Your `contoso` folder should look like below. Make sure you are fully comfortable with what those files are. (_you can ignore state.backup file for now_)
 
