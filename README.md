@@ -40,7 +40,7 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 
 * Keep the `guide` folder open in a separate tab / window for convenience. Please use the version on github as the source of truth.
 
-<a target="_blank" href="https://github.com/suren-m/tfw/tree/master/guide">This link will open guide in a new tab</a>
+   <a target="_blank" href="https://github.com/suren-m/tfw/tree/master/guide">Keep this link open in a new tab or a window</a>
 
 ---
 
