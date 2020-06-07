@@ -15,6 +15,26 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 
 ---
 
+#### Getting started:
+
+* Clone this repo into your `clouddrive` folder in cloud shell.
+
+    *   `clouddrive` folder is backed by fileshare in the storage account created for your cloud shell
+
+```bash
+    # make sure you are in the clouddrive folder 
+    cd ~/clouddrive
+
+    # clone
+    git clone ghttps://github.com/suren-m/tfw.git
+
+    # cd into the labs folder
+    cd labs
+
+    # All set for now, get started with the labs when instructed
+```
+---
+
 Cloud Shell already comes with a simple edtior as well as tools such as Terraform, Az CLI and git installed and is highly recommended  for this lab. 
 
 However, if you prefer to use VS Code instead of Azure Cloud shell, then follow instructions below for setting up codespaces.
@@ -24,3 +44,5 @@ However, if you prefer to use VS Code instead of Azure Cloud shell, then follow 
 #### Codespace Environment Setup (VS Code Online)
 
 > See: [codespaces_setup](https://github.com/suren-m/remote-workshop-env/blob/master/codespaces/codespaces_setup.md)
+
+---
