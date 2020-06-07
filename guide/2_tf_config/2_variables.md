@@ -74,6 +74,10 @@ tags = {
 ```
 * Save both `main.tf` and `terraform.tf` files
 
+> If you're using the `editor` to keep track of newly created files, make sure to hit the `refresh` button on top-right corner of the left panel to make sure it shows you the latest file structure.
+
+![refresh_button](../assets/refresh_files.png)
+
 #### Plan and Apply
 
 Now, run a **`terraform plan`**. When prompted for **var.prefix**, enter "contoso"
