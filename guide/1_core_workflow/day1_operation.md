@@ -31,7 +31,7 @@ cd ~/clouddrive/tfw/contoso
 
 ```terraform
 provider "azurerm" {
-    version = "~>2.0.0"
+    version = "~>2.13.0"
     features {}    
 }
 
@@ -43,7 +43,7 @@ resource "azurerm_resource_group" "contoso_rg" {
 
 * Take a quick look at above code and understand what it does.
 
-    * `~>` is pessismistic constraint operator. Here it tells terraform to use all `azurerm` non-beta versions >=2.0.0 and < 2.1.0
+    * `~>` is pessismistic constraint operator. Here it tells terraform to use all `azurerm` non-beta versions >=2.13.0 and < 2.14.0
 
 * Save `main.tf` (`ctrl + s` should work on cloud shell)
 
@@ -131,7 +131,15 @@ terraform show terraform.tfstate
 git commit -m "created resource group"
 ```
 
-* _You are welcome to push your changes to your own remote if you prefer._
+* _You are welcome to push your changes to your own github remote if you prefer. 
+
+    * For this, You'll have to setup an ssh key using `ssh-keygen` from your cloud shell and add the public key to your github account in order to be able push the repo to your origin. 
+
+    * You'll also have up your `remote` by doing a `git remote add <your_remote_origin_name(e.g: upstream)> <your_remote_url>
+    
+    * See: https://help.github.com/en/github/using-git/adding-a-remote
+
+    * If you're new to git, and unsure about these steps. Feel free to skip for now, and we can cover these tomorrow when discussing Terraform and DevOps.
 
 ---
 

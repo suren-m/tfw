@@ -39,13 +39,13 @@ resource "azurerm_resource_group" "contoso_rg" {
 Do a `terraform plan` but this time we are also storing the **`output`** in a separate `.tfplan` file
 
 ```bash
-terraform plan -out main.tfplan
+terraform plan -out contoso.tfplan
 ```  
 
 Take a look at the plan file that's been created using **`show`** command as before.
 
 ```bash
-terraform show main.tfplan
+terraform show contoso.tfplan
 ```   
 You should see something like below
 
@@ -74,7 +74,7 @@ Pass the plan file to terraform apply and this time, we also do an `-auto-approv
 
 ```bash
 # Note: ordering of args is important in this case.
-terraform apply -auto-approve "main.tfplan"
+terraform apply -auto-approve "contoso.tfplan"
 ```
 
 The terminal output should state something like below

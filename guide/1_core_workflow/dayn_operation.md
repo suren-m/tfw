@@ -2,14 +2,22 @@
 
 ## Day n operation (destroy)
 
-**destroy**
+**plan**
 
-Here we remove the resource group that we created using `destroy` operation.
-
-`Destroy` depends on your state file to decide what needs to be removed.
+Run a plan to see what will be destroyed.
 
 ```bash
 # make sure you are running this from the contoso folder
+terraform plan -destroy
+```
+
+**destroy**
+
+If the plan looks as expected, go ahead and remove the resource group that we created using `destroy` operation.
+
+`Destroy` depends on your state file to decide what needs to be removed. Unlike apply it cannot be invoked with a `.tfplan` file.
+
+```bash
 terraform destroy
 ```
 
