@@ -65,6 +65,7 @@ Topics Covered:
 
 The contoso folder should now look like below.
 
+```
 contoso
 |___.terraform/ 
 |___contoso.europe.tfvars
@@ -76,5 +77,4 @@ contoso
 |___terraform.tfstate.backup
 |___terraform.tfvars
 |___variables.tf
-
 ----
