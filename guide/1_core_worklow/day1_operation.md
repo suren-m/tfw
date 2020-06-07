@@ -100,9 +100,11 @@ Take a look at the Azure portal and verify that the resource has been created.
 
 *  Take a few minutes to understand what `terraform` generated during `apply`
 
+> The terraform `show` command is used to provide human-readable output from a state or plan file. See: https://www.terraform.io/docs/commands/show.html
+
 ```bash
 # Below should display the current state of your terraform managed infrastructure    
-cat terraform.state
+terraform show terraform.tfstate
 ```
 **Important Note**: `.tfstate` will contain sensitive information and must be kept be very secure. You will see that it's in `.gitignore` to make sure it's not accidentally checked into version control.
 

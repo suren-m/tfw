@@ -35,6 +35,10 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
         # cd into the contoso folder
         cd contoso
 
+        # Make sure terraform is available in your lab environment
+        # This should return something like `v0.12.x`
+        terraform version
+
         # All set for now, get started with the labs when instructed
     ```
 
