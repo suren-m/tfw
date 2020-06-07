@@ -43,6 +43,8 @@ resource "azurerm_resource_group" "contoso_rg" {
 
 * Take a quick look at above code and understand what it does.
 
+    * `~>` is pessismistic constraint operator. Here it tells terraform to use all `azurerm` non-beta versions >=2.0.0 and < 2.1.0
+
 * Save `main.tf` (`ctrl + s` should work on cloud shell)
 
 **Init**
