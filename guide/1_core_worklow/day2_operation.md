@@ -98,3 +98,26 @@ Take a quick look at the state file as well.
 terraform show terraform.tfstate
 ```
 ---
+
+#### Version control your code (as done before, feel free to give your own commit message)
+
+* Add `main.tf` to git
+
+    ```bash
+        # Make sure you're in right folder
+        cd ~/clouddrive/tfw/contoso
+        
+        git add .
+    ```
+
+* Above should only include `main.tf` 
+
+* Commit your changes
+
+```bash
+git commit -m "Added tags to resource group"
+```
+
+* _You are welcome to push your changes to your own remote if you prefer._
+
+---
