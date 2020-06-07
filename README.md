@@ -21,19 +21,24 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 
     *   `clouddrive` folder is backed by fileshare in the storage account created for your cloud shell
 
-```bash
-    # make sure you are in the clouddrive folder 
-    cd ~/clouddrive
+    ```bash
+        # make sure you are in the clouddrive folder 
+        cd ~/clouddrive
 
-    # clone
-    git clone ghttps://github.com/suren-m/tfw.git
+        # clone
+        git clone ghttps://github.com/suren-m/tfw.git
 
-    # cd into the labs folder
-    cd labs
+        # cd into the labs folder
+        cd labs    
 
-    # All set for now, get started with the labs when instructed
-```
+        # All set for now, get started with the labs when instructed
+    ```
+
+* Keep the `guide` folder open in a separate tab / window for convenience. Please use the version on github as the source of truth.
+
 ---
+
+[Optional]
 
 Cloud Shell already comes with a simple edtior as well as tools such as Terraform, Az CLI and git installed and is highly recommended  for this lab. 
 
