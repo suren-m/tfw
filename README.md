@@ -17,7 +17,7 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 
 Cloud Shell already comes with a simple edtior as well as tools such as Terraform, Az CLI and git installed and is highly recommended  for this lab. 
 
-However, if you prefer to use VS Code instead of Azure Cloud shell, then follow instructions below for setting up codespaces.
+However, if you prefer to use cloud-hosted VS Code instead of Azure Cloud shell, then follow instructions below for setting up codespaces.
 
     > If you're unsure, just go with cloud shell for now.
 
