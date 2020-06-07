@@ -27,9 +27,13 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 
         # clone
         git clone ghttps://github.com/suren-m/tfw.git
+        
+        # cd into the repo
+        cd tfw
 
-        # cd into the labs folder
-        cd labs    
+        # We will be using the fictional company `contoso` for labs
+        # cd into the contoso folder
+        cd contoso
 
         # All set for now, get started with the labs when instructed
     ```
