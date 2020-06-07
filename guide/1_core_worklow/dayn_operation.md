@@ -31,6 +31,12 @@ Verify that the `contoso_rg` resource group has been deleted from your azure sub
 az group show --name "contoso_rg"
 ```
 
+The state file should now be empty as we have completely cleaned up our terraform managed infrastructure.
+
+```bash
+terraform show terraform.tfstate
+```
+
 ---
 
 ## Recap
