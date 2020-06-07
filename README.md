@@ -8,12 +8,10 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
 
 > See: [azure_subscription_setup](https://github.com/suren-m/remote-workshop-env/blob/master/azure_subscription/az_subscription_setup.md)
 
----
 ####  Azure Cloud Shell Setup
 
 > See: [cloud_shell_setup](https://github.com/suren-m/remote-workshop-env/blob/master/cloud_shell/cloud_shell_setup.md)
 
----
 
 #### Getting started:
 
