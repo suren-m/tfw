@@ -13,6 +13,15 @@ Here we remove the resource group that we created using `destroy` operation.
 terraform destroy
 ```
 
+You should see a terminal output stating what will be destroyed.
+
+When prompted, type `yes` to approve. This operation may take some time, and terraform will provide status updates every 10 seconds or so.
+
+_Example Screenshot_:
+
+![destroy_example](../assets/destroy_example.png)
+
+
 **Verify**
 
 Verify that the `contoso_rg` resource group has been deleted from your azure subscription.
@@ -30,7 +39,7 @@ az group show --name "contoso_rg"
 
 * init
 * plan
-    * plan --output "planfile"
+    * plan -out "planfile"
 * apply
     * apply -auto-approve "planfile"
 * show

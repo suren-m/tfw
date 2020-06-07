@@ -39,7 +39,7 @@ resource "azurerm_resource_group" "contoso_rg" {
 Do a `terraform plan` but this time we are also storing the **`output`** in a separate `.tfplan` file
 
 ```bash
-terraform plan --output main.tfplan
+terraform plan -out main.tfplan
 ```  
 
 Take a look at the plan file that's been created using **`show`** command as before.
