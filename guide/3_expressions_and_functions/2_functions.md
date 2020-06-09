@@ -25,7 +25,7 @@ To exit the console at any time and go back to cloud shell's terminal, just type
 
 #### Explore and practice a handful of built-in functions using the console
 
-> Built-in functions greatly help with writing cleaner code. We will use some of the functions in our config later.
+> Built-in functions greatly help with writing cleaner code. We will use some of the functions in our config later as well.
 
 * Numeric Functions
 
@@ -65,6 +65,9 @@ keys({a=1, c=2, d=3})
 
 # sort a list
 sort(["e", "d", "a"])
+
+# get length of string, list or map
+length([1, 2, 3, 4, 5])
 ```
 
 * Type Conversion functions
