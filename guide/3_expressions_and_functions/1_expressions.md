@@ -160,6 +160,9 @@ rg_ids = [
 ]
 ```
 
+#### Commit your code
+* Do a `git add` and `commit` as we've done before.
+
 ---
 
 #### Recap:
