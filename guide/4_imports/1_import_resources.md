@@ -103,7 +103,7 @@ terraform show
 ```
 
 #### Plan
-Run a `terraform plan`. This time, `temp_rg` should also get picked up such as below.
+Run a `terraform plan`. This time, `temp_rg` should also get picked up such as below. This means we should be able to manage this resource using terraform moving forward.
 
 ```bash
 Refreshing Terraform state in-memory prior to plan...
