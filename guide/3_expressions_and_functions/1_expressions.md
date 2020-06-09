@@ -60,6 +60,9 @@ tags = {
 
 > length(type) is a built-in function. We'll cover functions in following lab. 
 
+
+_To become familar HCL syntax, please take your time to type in the code whenever possible._
+
 ```terraform
 # main.tf
 provider "azurerm" {
