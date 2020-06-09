@@ -13,10 +13,10 @@
 
 ```bash
 # if you are using azure shell
-
 cd ~/clouddrive/tfw/contoso
 
 # Navigate accordingly if you are using vs code online or local environment
+# In vs code online, the default location is ~/workspace but you can always create a folder such as `mkdir ~/clouddrive` if you like to keep it same as cloud shell.
 ```
 
 ---
