@@ -160,6 +160,10 @@ rg_ids = [
 ]
 ```
 
+#### Clean up your Infrastructure
+
+* Run a `terraform destroy`
+
 #### Commit your code
 * Do a `git add` and `commit` as we've done before.
 
