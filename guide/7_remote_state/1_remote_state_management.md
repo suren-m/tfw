@@ -34,6 +34,7 @@ chmod +x storage_setup.sh
 #### Create an environment variable for storage access key
 
 ```bash
+# Check the output on your terminal from running the shell script for storage key 
 export ARM_ACCESS_KEY=<storage access key>
 ```
 
