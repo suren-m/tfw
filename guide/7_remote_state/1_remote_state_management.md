@@ -17,6 +17,6 @@ cd ~/clouddrive/tfw/contoso
 > Download and run the storage account setup script
 
 ```bash
-curl 
+curl https://raw.githubusercontent.com/suren-m/tfw/master/guide/assets/storage.sh -o storage_setup.sh
 
 ```
