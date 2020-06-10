@@ -17,6 +17,146 @@ cd ~/clouddrive/tfw/contoso
 > Download and run the storage account setup script
 
 ```bash
-curl https://raw.githubusercontent.com/suren-m/tfw/master/guide/assets/storage.sh -o storage_setup.sh
+curl https://raw.githubusercontent.com/suren-m/tfw/master/guide/assets/storage_setup.sh -o storage_setup.sh
 
+# Take a look at the script and see what it does
+cat storage_setup.sh
+
+# provide execution rights
+chmod +x storage_setup.sh
+
+# Run the script and take note of output
+./storage_setup.sh
 ```
+
+> Note down the storage account details from the output. You can also find this from portal.
+
+#### Create an environment variable for storage access key
+
+```bash
+export ARM_ACCESS_KEY=<storage access key>
+```
+
+#### Create a terraform block in `main.tf` to include the backend configuration
+
+> From `contoso/main.tf`, add the following to begining of the file and fill it with your storage account details.
+
+```terraform
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "tstate"
+    storage_account_name  = "<your_storage_account_name>"
+    container_name        = "tstate"
+    key                   = "terraform.tfstate"
+  }
+}
+```
+
+#### Get rid of the existing plugins, state files, etc.
+
+To make sure, nothing gets in the way remove `terraform.tfstate`, `terraform.tfstate.backup` and `.terraform` folder as well. 
+
+> Note: In real world scenario, you may want to migrate your existing state from local to remote. For the purpose of lab, we are starting out with directly deploying to remote from onset.
+
+```bash
+# make sure you are in right directory
+cd ~/clouddrive/tfw/contoso
+rm terraform.tfstate terraform.tfstate.backup
+rm -rf .terraform/
+```
+
+#### Init, Plan and Apply
+
+Do an init, plan and apply. 
+
+> Initialize
+```
+# The output from init should setup a remote backend.
+terraform init
+
+# You can take a quick look at `.terraform` folder if interested to see what it's in its `state` file.
+```
+
+>Plan
+```
+terraform plan
+```
+
+> When ready, Apply
+```
+Apply
+```
+
+#### Verify
+
+* Verify the resources that were created
+* Take a look at the state file in the blob container of your storage account and make sure it's updated too.
+* There shouldn't be any more local state file in `contoso` folder.
+
+---
+
+#### [Optional]
+
+Feel free to carry on with below ones if you have finished the labs ahead of time.
+
+#### Locking 
+
+If you are interested, open two terminals and try doing a `terraform apply` on each (don't proceed with approval). You should find that the second one will fail because the first apply stil has the `tfstate` file locked.
+
+* Take a look at locking here
+    *  https://www.terraform.io/docs/state/locking.html
+
+#### Partial Config
+
+At the moment, we have the storage account name hard-coded in `main.tf`
+
+We can use `partial config` feature during initialization stage to pass this value.
+
+**Remove below line of code from `main.tf`**
+
+```terraform
+storage_account_name  = "<your_sg_account>"
+```
+
+To avoid any issues, destory the existing environment and remove any plugins.
+```bash
+cd ~/clouddrive/contoso/tfw
+terraform destroy
+rm -rf .terraform/
+
+# Now init with partial config (pass in your storage account name)
+terraform init -backend-config="storage_account_name=your-sg-account"
+```
+
+> Plan and apply. It should work the same way as before.
+
+---
+
+#### Commit and clean up your infrastructure
+
+> Do a git commit and download the repo or push it to your remote for reference or further learning.
+> clean up the infrastructure (including the storage account and any credentials)
+
+--- 
+
+#### Recommended Reading
+
+* Take a few minutes to glance through below docs as well.
+    * https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage
+    * https://www.terraform.io/docs/backends/config.html
+
+#### Useful Links
+
+Below links could help you further in your terraform journey.
+
+* https://learn.hashicorp.com/terraform/azure/intro_az
+* https://learn.hashicorp.com/terraform/modules/modules-overview
+* https://learn.hashicorp.com/terraform#operations-and-development
+
+* https://www.terraform.io/docs/providers/azurerm/index.html
+
+#### Config Samples from Azure and Terraform
+
+* https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples
+
+---
