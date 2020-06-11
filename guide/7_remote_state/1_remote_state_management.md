@@ -45,9 +45,9 @@ export ARM_ACCESS_KEY=<storage access key>
 ```terraform
 terraform {
   backend "azurerm" {
-    resource_group_name   = "tstate"
+    resource_group_name   = "tfstate"
     storage_account_name  = "<your_storage_account_name>"
-    container_name        = "tstate"
+    container_name        = "tfstate"
     key                   = "terraform.tfstate"
   }
 }
@@ -121,7 +121,7 @@ storage_account_name  = "<your_sg_account>"
 
 To avoid any issues, destory the existing environment and remove any plugins.
 ```bash
-cd ~/clouddrive/contoso/tfw
+cd ~/clouddrive/tfw/contoso
 terraform destroy
 rm -rf .terraform/
 
