@@ -27,6 +27,12 @@ There are also other provisioners. Have a look at below:
 
 ---
 
+#### Explore more sub-commands
+
+> Explore more sub commands such as `fmt`, `taint`, `validate` and how they can help.
+
+See : https://learn.hashicorp.com/terraform/certification/terraform-associate-study-guide#learn-more-subcommands
+
 #### Recommended Reading
 
 * Take a few minutes to glance through below docs as well.
@@ -46,5 +52,11 @@ Below links could help you further in your terraform journey.
 * https://learn.hashicorp.com/terraform#operations-and-development
 
 * https://www.terraform.io/docs/providers/azurerm/index.html
+
+---
+
+#### Terraform Associate Certification Path
+
+https://learn.hashicorp.com/terraform/certification/terraform-associate-study-guide
 
 ---
