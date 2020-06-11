@@ -130,7 +130,6 @@ terraform init -backend-config="storage_account_name=your-sg-account"
 ```
 
 > Plan and apply. It should work the same way as before.
-
 ---
 
 #### Commit and clean up your infrastructure
@@ -139,25 +138,3 @@ terraform init -backend-config="storage_account_name=your-sg-account"
 > clean up the infrastructure (including the storage account and any credentials)
 
 --- 
-
-#### Recommended Reading
-
-* Take a few minutes to glance through below docs as well.
-    * https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage
-    * https://www.terraform.io/docs/backends/config.html
-
-#### Useful Links
-
-Below links could help you further in your terraform journey.
-
-* https://learn.hashicorp.com/terraform/azure/intro_az
-* https://learn.hashicorp.com/terraform/modules/modules-overview
-* https://learn.hashicorp.com/terraform#operations-and-development
-
-* https://www.terraform.io/docs/providers/azurerm/index.html
-
-#### Config Samples from Azure and Terraform
-
-* https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples
-
----
