@@ -62,3 +62,7 @@ Below links could help you further in your terraform journey.
 https://learn.hashicorp.com/terraform/certification/terraform-associate-study-guide
 
 ---
+
+#### Terraform Whitepapers
+
+https://www.hashicorp.com/resources/unlocking-the-cloud-operating-model-provisioning/?utm_source=terraformselfserviceCTA
