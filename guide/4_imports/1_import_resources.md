@@ -12,10 +12,11 @@ cd ~/clouddrive/tfw/contoso
 
 #### Create a resource group called "temp_rg" using azure portal or cli in "UK South" 
 
-Create a resource group outside of terraform.
+Create a couple of resource groups outside of terraform.
  
 ```bash
 az group create --name temp_rg --location "UK South"
+az group create --name temp_rg2 --location "UK South"
 
 ```
 
@@ -24,9 +25,17 @@ az group create --name temp_rg --location "UK South"
 Append below code into `main.tf` (we are trying to create same resource group via terraform)
 
 ```terraform
+data "azurerm_resource_group" "temp_rg2_res" {
+  name = "temp_rg2"
+}
+
 resource "azurerm_resource_group" "rg" {
     name = "temp_rg"
     location = "UK South"
+
+    tags = {
+      reference = data.azurerm_resource_group.temp_rg2_res.id
+    }
 }
 ```
 
@@ -46,10 +55,16 @@ Terraform will perform the following actions:
       + id       = (known after apply)
       + location = "uksouth"
       + name     = "temp_rg"
+
+      + tags = {
+        reference = "..../temp_rg2"
+      }
     }
 
     # ....plus other resource groups we know of
 ```
+
+> **Data Source** - Also note that we are able to refer the id of `temp_rg2` resource group without any issues. This is because we are not trying to manage that resource, but only retrieving some details about it.
 
 ----
 

@@ -96,7 +96,7 @@ Apply
 
 ---
 
-#### [Optional]
+#### [Bonus Tasks if you have time]
 
 Feel free to carry on with below ones if you have finished the labs ahead of time.
 
