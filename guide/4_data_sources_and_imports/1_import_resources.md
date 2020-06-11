@@ -24,6 +24,8 @@ az group create --name temp_rg2 --location "UK South"
 
 Append below code into `main.tf` (we are trying to create same resource group via terraform)
 
+We are also using `data` block, so we can retrieve the `id` of `temp_rg2` resource group
+
 ```terraform
 data "azurerm_resource_group" "temp_rg2_res" {
   name = "temp_rg2"
