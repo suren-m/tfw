@@ -78,6 +78,8 @@ terraform init
 # You can take a quick look at `.terraform` folder if interested to see what it's in its `state` file.
 ```
 
+#### If you run into any issues, remove `.terraform` folder and do an init again.
+
 >Plan
 ```
 terraform plan
