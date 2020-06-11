@@ -138,3 +138,8 @@ terraform init -backend-config="storage_account_name=your-sg-account"
 > clean up the infrastructure (including the storage account and any credentials)
 
 --- 
+
+Recap:
+
+* Terraform Backend Docs- https://www.terraform.io/docs/backends/index.html
+* AzureRM Backend - https://www.terraform.io/docs/backends/types/azurerm.html
