@@ -11,8 +11,10 @@ Handy workspace related commands
 terraform workspace list
 terrraform workspace new <workspace_name>
 terraform workspace select <workspace_name>
+```
 
-# Explore .terraform folder and terraform.tfstate.d folders
+> Explore .terraform folder and terraform.tfstate.d folders
+
 ---
 
 #### Provisioners
