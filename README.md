@@ -4,10 +4,6 @@
 
 Make sure you have setup your Azure Subscription and Cloud Shell by following the instructions below.
 
-####  Azure Account Setup from Subscription Pass
-
-> See: [azure_subscription_setup](https://github.com/suren-m/remote-workshop-env/blob/master/azure_subscription/az_subscription_setup.md)
-
 ####  Azure Cloud Shell Setup
 
 > See: [cloud_shell_setup](https://github.com/suren-m/remote-workshop-env/blob/master/cloud_shell/cloud_shell_setup.md)
@@ -42,7 +38,7 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
         # All set for now, get started with the labs when instructed
     ```
 
-* Keep the `guide` folder open in a separate tab / window for convenience. Please use the version on github as the source of truth.
+* Keep the `guide` folder open in a separate tab / window for convenience. **Please use the version on github** as the source of truth.
 
    <a target="_blank" href="https://github.com/suren-m/tfw/tree/master/guide">Keep this link open in a new tab or a window</a>
 
