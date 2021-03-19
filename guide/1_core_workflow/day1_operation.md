@@ -15,8 +15,7 @@
 # if you are using azure shell
 cd ~/clouddrive/tfw/contoso
 
-# Navigate accordingly if you are using vs code online or local environment
-# In vs code online, the default location is ~/workspace but you can always create a folder such as `mkdir ~/clouddrive` if you like to keep it same as cloud shell.
+# Navigate accordingly if you are using your own dev environment
 ```
 
 ---
@@ -30,9 +29,18 @@ cd ~/clouddrive/tfw/contoso
     * If you are in `cloud shell`, you can type **`code .`** and select `main.tf` or simply **`code main.tf`** in terminal to bring up the editor.
 
 ```terraform
+terraform {
+    required_providers {
+        azurerm = {
+        source  = "hashicorp/azurerm"
+        version = "=2.46.0"
+        }
+    }
+}
+
+# Configure the Microsoft Azure Provider
 provider "azurerm" {
-    version = "~>2.13.0"
-    features {}    
+    features {}
 }
 
 resource "azurerm_resource_group" "contoso_rg" {
