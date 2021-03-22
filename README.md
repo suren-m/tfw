@@ -22,7 +22,7 @@ Make sure you have setup your Azure Subscription and Cloud Shell by following th
         cd ~/clouddrive
 
         # clone
-        git clone ghttps://github.com/suren-m/tfw.git
+        git clone https://github.com/suren-m/tfw.git
         
         # cd into the repo
         cd tfw
