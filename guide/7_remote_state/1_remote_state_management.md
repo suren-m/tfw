@@ -50,6 +50,12 @@ terraform {
     container_name        = "tfstate"
     key                   = "terraform.tfstate"
   }
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
 }
 ```
 
