@@ -56,10 +56,14 @@
 * Try creating a resource-group via ansible-playbook to further ensure ansible has access.
 * https://docs.microsoft.com/en-us/azure/developer/ansible/getting-started-cloud-shell?tabs=ansible#create-an-azure-resource-group
 
+---
+
 #### 5. Deploy target VMs (windows or linux)
 * Note that if configuring linux VMs, ansible would rely on mechansims such as `ssh` to authenticate.
 * If managing Windows VM, then ansible would rely on WinRM.
 * Provision the desired targets.
+
+---
 
 #### 6. Query the inventory dynamically.
 * Targets can be retrieved dynamically by using below: (adjust the values accordingly)
@@ -101,7 +105,7 @@ For more, see: https://docs.microsoft.com/en-us/azure/developer/ansible/dynamic-
 
 ---
 
-#### 5. `WinRM` listener dependency for managing windows VMs
+#### 7. `WinRM` listener dependency for managing windows VMs
 * Requires setting `WinRM` listener first
 
 > Dependency - `pip install "pywinrm>=0.3.0"` (feel free to try pip3 as well)
@@ -141,7 +145,7 @@ Example:
 
 ---
 
-#### 6. Configure Windows VMs
+#### 8. Configure Windows VMs
 
 * Feel free to change hosts to `all` if all the items in inventory are windows, and not grouped by OS
 
