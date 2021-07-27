@@ -149,13 +149,14 @@ Example:
 
 * Feel free to change hosts to `all` if all the items in inventory are windows, and not grouped by OS
 
-** This is example just uses basic auth. For more advanced auth options, please see below: **
+** This example just uses basic auth. For more advanced auth options, please see below: **
 * https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html#authentication-options
 
 ```
-- hosts: windows
+- hosts: windows # or all if the entire inventory is windows and not grouped
   vars:
     ansible_user: "{{ lookup('env', 'winuser') }}"
+    # Or prompt if running from interactive environment
     ansible_password: "{{ lookup('env', 'winpass') }}"
     ansible_connection: winrm
     ansible_winrm_transport: ntlm
@@ -169,6 +170,8 @@ Example:
         name: 7zip
         state: present    
 ```
+
+Msft docs: https://docs.microsoft.com/en-us/azure/developer/ansible/vm-configure-windows?tabs=ansible#connect-to-the-windows-virtual-machine
 
 Also look at features such as `ansible-vault` for encrypting data. 
 * https://docs.ansible.com/ansible/latest/user_guide/vault.html
