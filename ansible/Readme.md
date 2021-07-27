@@ -2,7 +2,7 @@
 
 #### Ansible only runs on linux, so this guide also assumes the reader is somewhat familiar with linux based environments.
 
-#### Please note that this is not a lab guide as this is a more advanced section. 
+#### Please note that this is not a lab guide as this is a more advanced section compared to terraform labs. 
 #### Please refer to official Ansible and Msft docs for upto date guides, as the items here are prone to change.
 
 ---
